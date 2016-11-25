@@ -1,6 +1,6 @@
 <?php
 return [
-    'endpoint' => 'https://demo.cachethq.io/api/v1',
+    'endpoint' => 'https://demo.cachethq.io/api/v1/',
     'token' => 'ChangeMe',
     'enable' => true,
     'issueableEvents' => [

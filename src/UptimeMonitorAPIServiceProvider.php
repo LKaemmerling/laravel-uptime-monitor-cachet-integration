@@ -33,9 +33,5 @@ class UptimeMonitorCachetIntegrationServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/laravel-uptime-monitor-cachet-integration.php', 'laravel-uptime-monitor-cachet-integration');
         $this->app['events']->subscribe(LaravelUptimeMonitorEventSubscriber::class);
-
-        $this->app->singleton(CachetApiHelper::class, function ($app) {
-            return new CachetApiHelper();
-        });
     }
 }

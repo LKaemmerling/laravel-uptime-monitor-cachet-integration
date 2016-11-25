@@ -54,9 +54,9 @@ class Incident implements Arrayable
      */
     public static function parse(Monitor $monitor, string $eventClassName)
     {
-        $incident = new static();
-        $incident->name = trans('laravel-uptime-monitor-cachet-integration.' . $eventClassName . '.name', [':url' => $monitor->url]);
-        $incident->message = trans('laravel-uptime-monitor-cachet-integration.' . $eventClassName . '.message', [':url' => $monitor->url, ':date' => $monitor->uptime_status_last_change_date]);
+        $incident = new self();
+        $incident->name = trans('laravel-uptime-monitor-cachet-integration::incident.' . $eventClassName . '.name', ['url' => $monitor->url]);
+        $incident->message = trans('laravel-uptime-monitor-cachet-integration::incident.' . $eventClassName . '.message', ['url' => $monitor->url, 'date' => $monitor->uptime_status_last_change_date]);
         $incident->status = config('laravel-uptime-monitor-cachet-integration.defaults.status');
         $incident->visible = config('laravel-uptime-monitor-cachet-integration.defaults.visible');
         $incident->component_id = config('laravel-uptime-monitor-cachet-integration.defaults.component_id');

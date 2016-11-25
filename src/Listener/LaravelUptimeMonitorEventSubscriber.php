@@ -2,6 +2,7 @@
 
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Listener;
 
+use Illuminate\Contracts\Events\Dispatcher;
 use LKDevelopment\UptimeMonitorCachetIntegration\Enums\Incident;
 use LKDevelopment\UptimeMonitorCachetIntegration\Helpers\CachetApiHelper;
 
@@ -13,7 +14,7 @@ class LaravelUptimeMonitorEventSubscriber
     /**
      * @param $events
      */
-    public function subscribe($events)
+    public function subscribe(Dispatcher $events)
     {
         $events->listen(config('laravel-uptime-monitor-cachet-integration.issueableEvents'), function ($event) {
             $helper = new CachetApiHelper();

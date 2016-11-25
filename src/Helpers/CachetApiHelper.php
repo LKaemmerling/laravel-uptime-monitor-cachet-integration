@@ -1,4 +1,5 @@
 <?php
+
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Helpers;
 
 use Damianopetrungaro\CachetSDK\CachetClient;
@@ -6,8 +7,7 @@ use Damianopetrungaro\CachetSDK\Incidents\IncidentFactory;
 use LKDevelopment\UptimeMonitorCachetIntegration\Enums\Incident;
 
 /**
- * Class CachetApiHelper
- * @package LKDevelopment\UptimeMonitorCachetIntegration\Helpers
+ * Class CachetApiHelper.
  */
 class CachetApiHelper
 {
@@ -30,7 +30,6 @@ class CachetApiHelper
      */
     public function sendIncident(Incident $incident)
     {
-
         $incidentManager = IncidentFactory::build($this->cachetClient);
         $incidentManager->storeIncident($incident->toArray());
 

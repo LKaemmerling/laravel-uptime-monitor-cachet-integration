@@ -3,14 +3,12 @@
 namespace LKDevelopment\UptimeMonitorCachetIntegration;
 
 use Illuminate\Support\ServiceProvider;
-use LKDevelopment\UptimeMonitorCachetIntegration\Helpers\CachetApiHelper;
 use LKDevelopment\UptimeMonitorCachetIntegration\Listener\LaravelUptimeMonitorEventSubscriber;
 
 /**
- * Class UptimeMonitorCachetIntegrationServiceProvider
- * @package LKDevelopment\UptimeMonitorCachetIntegration
+ * Class UptimeMonitorCachetIntegrationServiceProvider.
  */
-class UptimeMonitorCachetIntegrationServiceProvider extends ServiceProvider
+class UptimeMonitorAPIServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -18,11 +16,11 @@ class UptimeMonitorCachetIntegrationServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/laravel-uptime-monitor-cachet-integration.php' => config_path('laravel-uptime-monitor-cachet-integration.php'),
+            __DIR__.'/../config/laravel-uptime-monitor-cachet-integration.php' => config_path('laravel-uptime-monitor-cachet-integration.php'),
         ], 'config');
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'laravel-uptime-monitor-cachet-integration');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-uptime-monitor-cachet-integration');
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang/vendor/laravel-uptime-monitor-cachet-integration'),
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-uptime-monitor-cachet-integration'),
         ]);
     }
 
@@ -31,7 +29,7 @@ class UptimeMonitorCachetIntegrationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/laravel-uptime-monitor-cachet-integration.php', 'laravel-uptime-monitor-cachet-integration');
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-uptime-monitor-cachet-integration.php', 'laravel-uptime-monitor-cachet-integration');
         $this->app['events']->subscribe(LaravelUptimeMonitorEventSubscriber::class);
     }
 }

@@ -1,12 +1,12 @@
 <?php
+
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Enums;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Spatie\UptimeMonitor\Models\Monitor;
 
 /**
- * Class Incident
- * @package LKDevelopment\UptimeMonitorCachetIntegration\Enums
+ * Class Incident.
  */
 class Incident implements Arrayable
 {
@@ -19,23 +19,23 @@ class Incident implements Arrayable
      */
     public $message;
     /**
-     * @var integer
+     * @var int
      */
     public $status;
     /**
-     * @var boolean
+     * @var bool
      */
     public $visible;
     /**
-     * @var integer
+     * @var int
      */
     public $component_id;
     /**
-     * @var integer
+     * @var int
      */
     public $component_status;
     /**
-     * @var boolean
+     * @var bool
      */
     public $notify;
 
@@ -55,13 +55,14 @@ class Incident implements Arrayable
     public static function parse(Monitor $monitor, string $eventClassName)
     {
         $incident = new self();
-        $incident->name = trans('laravel-uptime-monitor-cachet-integration::incident.' . $eventClassName . '.name', ['url' => $monitor->url]);
-        $incident->message = trans('laravel-uptime-monitor-cachet-integration::incident.' . $eventClassName . '.message', ['url' => $monitor->url, 'date' => $monitor->uptime_status_last_change_date]);
+        $incident->name = trans('laravel-uptime-monitor-cachet-integration::incident.'.$eventClassName.'.name', ['url' => $monitor->url]);
+        $incident->message = trans('laravel-uptime-monitor-cachet-integration::incident.'.$eventClassName.'.message', ['url' => $monitor->url, 'date' => $monitor->uptime_status_last_change_date]);
         $incident->status = config('laravel-uptime-monitor-cachet-integration.defaults.status');
         $incident->visible = config('laravel-uptime-monitor-cachet-integration.defaults.visible');
         $incident->component_id = config('laravel-uptime-monitor-cachet-integration.defaults.component_id');
         $incident->component_status = config('laravel-uptime-monitor-cachet-integration.defaults.component_status');
         $incident->notify = config('laravel-uptime-monitor-cachet-integration.defaults.notify');
+
         return $incident;
     }
 }

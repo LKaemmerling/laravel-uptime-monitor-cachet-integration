@@ -1,12 +1,12 @@
 <?php
+
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Listener;
 
 use LKDevelopment\UptimeMonitorCachetIntegration\Enums\Incident;
 use LKDevelopment\UptimeMonitorCachetIntegration\Helpers\CachetApiHelper;
 
 /**
- * Class LaravelUptimeMonitorEventSubscriber
- * @package LKDevelopment\UptimeMonitorCachetIntegration\Listener
+ * Class LaravelUptimeMonitorEventSubscriber.
  */
 class LaravelUptimeMonitorEventSubscriber
 {

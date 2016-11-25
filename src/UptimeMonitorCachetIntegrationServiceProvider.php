@@ -8,7 +8,7 @@ use LKDevelopment\UptimeMonitorCachetIntegration\Listener\LaravelUptimeMonitorEv
 /**
  * Class UptimeMonitorCachetIntegrationServiceProvider.
  */
-class UptimeMonitorAPIServiceProvider extends ServiceProvider
+class UptimeMonitorCachetIntegrationServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

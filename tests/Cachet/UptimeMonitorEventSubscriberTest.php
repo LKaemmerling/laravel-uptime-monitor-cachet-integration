@@ -29,7 +29,7 @@ class UptimeMonitorEventSubscriberTest extends TestCase
     /** @test */
     public function test_send_to_cachet()
     {
-        $monitor = factory(Monitor::class)->create();
+        $monitor = factory(Monitor::class)->create(['uptime_check_interval_in_minutes' => 5]);
         $helper = new CachetApiHelper($this->client);
         $incident = Incident::parse($monitor, UptimeCheckFailed::class);
         $return = $helper->sendIncident($incident);

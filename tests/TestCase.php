@@ -23,6 +23,7 @@ abstract class TestCase extends Orchesta
      */
     protected function getEnvironmentSetUp($app)
     {
+        $app['translator']->setLocale('en');
         $app['config']->set('database.default', 'sqlite');
 
         $app['config']->set('mail.driver', 'log');

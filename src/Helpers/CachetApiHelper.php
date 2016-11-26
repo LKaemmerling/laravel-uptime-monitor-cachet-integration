@@ -18,10 +18,11 @@ class CachetApiHelper
 
     /**
      * CachetApiHelper constructor.
+     * @param CachetClient|null $client
      */
     public function __construct(CachetClient $client = null)
     {
-        if ($client == null) {
+        if ($client === null) {
             $this->cachetClient = new CachetClient(config('laravel-uptime-monitor-cachet-integration.endpoint'), config('laravel-uptime-monitor-cachet-integration.token'));
         } else {
             $this->cachetClient = $client;

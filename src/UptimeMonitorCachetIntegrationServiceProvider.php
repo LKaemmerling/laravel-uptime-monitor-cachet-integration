@@ -3,7 +3,7 @@
 namespace LKDevelopment\UptimeMonitorCachetIntegration;
 
 use Illuminate\Support\ServiceProvider;
-use LKDevelopment\UptimeMonitorCachetIntegration\Listener\LaravelUptimeMonitorEventSubscriber;
+use LKDevelopment\UptimeMonitorCachetIntegration\Listener\UptimeMonitorEventSubscriber;
 
 /**
  * Class UptimeMonitorCachetIntegrationServiceProvider.
@@ -30,6 +30,6 @@ class UptimeMonitorCachetIntegrationServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-uptime-monitor-cachet-integration.php', 'laravel-uptime-monitor-cachet-integration');
-        $this->app['events']->subscribe(LaravelUptimeMonitorEventSubscriber::class);
+        $this->app['events']->subscribe(UptimeMonitorEventSubscriber::class);
     }
 }

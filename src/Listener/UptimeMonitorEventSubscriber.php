@@ -10,7 +10,7 @@ use LKDevelopment\UptimeMonitorCachetIntegration\Helpers\CachetApiHelper;
 /**
  * Class LaravelUptimeMonitorEventSubscriber.
  */
-class LaravelUptimeMonitorEventSubscriber
+class UptimeMonitorEventSubscriber
 {
     /**
      * @param $events

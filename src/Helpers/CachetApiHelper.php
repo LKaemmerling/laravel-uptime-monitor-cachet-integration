@@ -36,8 +36,6 @@ class CachetApiHelper
     public function sendIncident(Incident $incident)
     {
         $incidentManager = IncidentFactory::build($this->cachetClient);
-        $incidentManager->storeIncident($incident->toArray());
-
-        return true;
+        return $incidentManager->storeIncident($incident->toArray());
     }
 }

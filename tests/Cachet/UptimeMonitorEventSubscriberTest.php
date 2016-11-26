@@ -3,11 +3,9 @@
  * Created by PhpStorm.
  * User: lukaskammerling
  * Date: 26.11.16
- * Time: 13:34
+ * Time: 13:34.
  */
-
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Tests\Cachet;
-
 
 use Damianopetrungaro\CachetSDK\CachetClient;
 use LKDevelopment\UptimeMonitorCachetIntegration\Enums\Incident;
@@ -33,7 +31,7 @@ class UptimeMonitorEventSubscriberTest extends TestCase
         $helper = new CachetApiHelper($this->client);
         $incident = Incident::parse($monitor, UptimeCheckFailed::class);
         $return = $helper->sendIncident($incident);
-        $this->assertEquals($incident->name,$return['data']['name']);
-        $this->assertEquals($incident->message,$return['data']['message']);
+        $this->assertEquals($incident->name, $return['data']['name']);
+        $this->assertEquals($incident->message, $return['data']['message']);
     }
 }

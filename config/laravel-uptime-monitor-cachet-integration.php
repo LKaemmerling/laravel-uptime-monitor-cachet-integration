@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'endpoint' => env('CACHET_ENDPOINT','https://demo.cachethq.io/api/v1/'),
-    'token' => env('CACHET_TOKEN','ChangeMe'),
+    'endpoint' => env('CACHET_ENDPOINT', 'https://demo.cachethq.io/api/v1/'),
+    'token' => env('CACHET_TOKEN', 'ChangeMe'),
     'enable' => true,
     'issueableEvents' => [
         Spatie\UptimeMonitor\Events\UptimeCheckFailed::class,

@@ -5,14 +5,15 @@
  * Date: 26.11.16
  * Time: 13:34.
  */
+
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Tests\Cachet;
 
-use Damianopetrungaro\CachetSDK\CachetClient;
-use LKDevelopment\UptimeMonitorCachetIntegration\Enums\Incident;
-use LKDevelopment\UptimeMonitorCachetIntegration\Helpers\CachetApiHelper;
-use LKDevelopment\UptimeMonitorCachetIntegration\Tests\TestCase;
-use Spatie\UptimeMonitor\Events\UptimeCheckFailed;
 use Spatie\UptimeMonitor\Models\Monitor;
+use Damianopetrungaro\CachetSDK\CachetClient;
+use Spatie\UptimeMonitor\Events\UptimeCheckFailed;
+use LKDevelopment\UptimeMonitorCachetIntegration\Enums\Incident;
+use LKDevelopment\UptimeMonitorCachetIntegration\Tests\TestCase;
+use LKDevelopment\UptimeMonitorCachetIntegration\Helpers\CachetApiHelper;
 
 class UptimeMonitorEventSubscriberTest extends TestCase
 {

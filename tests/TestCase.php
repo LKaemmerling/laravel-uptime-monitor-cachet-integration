@@ -5,10 +5,11 @@
  * Date: 26.11.16
  * Time: 13:31.
  */
+
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Tests;
 
-use LKDevelopment\UptimeMonitorCachetIntegration\UptimeMonitorCachetIntegrationServiceProvider;
 use Orchestra\Testbench\TestCase as Orchesta;
+use LKDevelopment\UptimeMonitorCachetIntegration\UptimeMonitorCachetIntegrationServiceProvider;
 
 abstract class TestCase extends Orchesta
 {

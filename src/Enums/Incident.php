@@ -2,8 +2,8 @@
 
 namespace LKDevelopment\UptimeMonitorCachetIntegration\Enums;
 
-use Illuminate\Contracts\Support\Arrayable;
 use Spatie\UptimeMonitor\Models\Monitor;
+use Illuminate\Contracts\Support\Arrayable;
 
 /**
  * Class Incident.

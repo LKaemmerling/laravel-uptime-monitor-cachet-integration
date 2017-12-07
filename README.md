@@ -8,7 +8,7 @@ This is an Addon Package for [Laravel Uptime Monitor from Spatie](https://github
 
 ## Documentation
 
-You can find the Documentation [here](http://lk-development.de/docs/laravel-uptime-monitor-cachet-integration-v1/).
+You can find the Documentation [here](https://lkdevelopment.github.io/docs/laravel-uptime-monitor-cachet-integration-v1/).
 
 ## Changelog
 
